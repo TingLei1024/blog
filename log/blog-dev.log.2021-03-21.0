@@ -1,0 +1,507 @@
+2021-03-21 16:10:28.244  INFO 23388 --- [restartedMain] com.bs.blog.BlogApplication              : Starting BlogApplication using Java 1.8.0_211 on DESKTOP-QN6R9BR with PID 23388 (C:\Users\王也\Desktop\2020毕设\blog\target\classes started by 王也 in C:\Users\王也\Desktop\2020毕设\blog)
+2021-03-21 16:10:28.268 DEBUG 23388 --- [restartedMain] com.bs.blog.BlogApplication              : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-21 16:10:28.269  INFO 23388 --- [restartedMain] com.bs.blog.BlogApplication              : The following profiles are active: dev
+2021-03-21 16:10:28.904  INFO 23388 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-21 16:10:28.904  INFO 23388 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-21 16:10:32.828  INFO 23388 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-21 16:10:33.121  INFO 23388 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 259 ms. Found 5 JPA repository interfaces.
+2021-03-21 16:10:33.612  WARN 23388 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bs.blog]' package. Please check your configuration.
+2021-03-21 16:10:35.322  INFO 23388 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-21 16:10:35.359  INFO 23388 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-21 16:10:35.360  INFO 23388 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-21 16:10:35.525  INFO 23388 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-21 16:10:35.525  INFO 23388 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6619 ms
+2021-03-21 16:10:36.119  INFO 23388 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-21 16:10:36.484  INFO 23388 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-21 16:10:36.846  INFO 23388 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-21 16:10:37.167  INFO 23388 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-21 16:10:37.170  WARN 23388 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-03-21 16:10:37.783  INFO 23388 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-21 16:10:37.856  INFO 23388 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-03-21 16:10:39.690  INFO 23388 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-21 16:10:39.726  INFO 23388 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-21 16:10:39.845  INFO 23388 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-21 16:10:40.873  WARN 23388 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'commentServiceImpl': Unsatisfied dependency expressed through field 'commentRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commentRepository' defined in com.bs.blog.dao.CommentRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort)! Method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort) expects at least 2 arguments but only found 1. This leaves an operator of type NEGATING_SIMPLE_PROPERTY for property parentComment unbound.
+2021-03-21 16:10:40.874  INFO 23388 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-21 16:10:40.898  INFO 23388 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-21 16:10:40.932  INFO 23388 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-21 16:10:40.936  INFO 23388 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-03-21 16:10:40.959  INFO 23388 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-03-21 16:10:41.073 ERROR 23388 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'commentServiceImpl': Unsatisfied dependency expressed through field 'commentRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commentRepository' defined in com.bs.blog.dao.CommentRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort)! Method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort) expects at least 2 arguments but only found 1. This leaves an operator of type NEGATING_SIMPLE_PROPERTY for property parentComment unbound.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:582)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.bs.blog.BlogApplication.main(BlogApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commentRepository' defined in com.bs.blog.dao.CommentRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort)! Method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort) expects at least 2 arguments but only found 1. This leaves an operator of type NEGATING_SIMPLE_PROPERTY for property parentComment unbound.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 26 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort)! Method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort) expects at least 2 arguments but only found 1. This leaves an operator of type NEGATING_SIMPLE_PROPERTY for property parentComment unbound.
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:107)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:218)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:81)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:100)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:93)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1049)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:85)
+	at java.util.Optional.map(Optional.java:215)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:85)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:303)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 36 common frames omitted
+Caused by: java.lang.IllegalStateException: Method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort) expects at least 2 arguments but only found 1. This leaves an operator of type NEGATING_SIMPLE_PROPERTY for property parentComment unbound.
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.throwExceptionOnArgumentMismatch(PartTreeJpaQuery.java:161)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.validate(PartTreeJpaQuery.java:147)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:90)
+	... 62 common frames omitted
+
+2021-03-21 16:11:24.971  INFO 22616 --- [restartedMain] com.bs.blog.BlogApplication              : Starting BlogApplication using Java 1.8.0_211 on DESKTOP-QN6R9BR with PID 22616 (C:\Users\王也\Desktop\2020毕设\blog\target\classes started by 王也 in C:\Users\王也\Desktop\2020毕设\blog)
+2021-03-21 16:11:24.974 DEBUG 22616 --- [restartedMain] com.bs.blog.BlogApplication              : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-21 16:11:24.974  INFO 22616 --- [restartedMain] com.bs.blog.BlogApplication              : The following profiles are active: dev
+2021-03-21 16:11:25.049  INFO 22616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-21 16:11:25.050  INFO 22616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-21 16:11:26.351  INFO 22616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-21 16:11:26.449  INFO 22616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 5 JPA repository interfaces.
+2021-03-21 16:11:26.616  WARN 22616 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bs.blog]' package. Please check your configuration.
+2021-03-21 16:11:27.490  INFO 22616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-21 16:11:27.503  INFO 22616 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-21 16:11:27.504  INFO 22616 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-21 16:11:27.620  INFO 22616 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-21 16:11:27.620  INFO 22616 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2569 ms
+2021-03-21 16:11:27.841  INFO 22616 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-21 16:11:27.897  INFO 22616 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-21 16:11:28.056  INFO 22616 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-21 16:11:28.178  INFO 22616 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-21 16:11:28.181  WARN 22616 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-03-21 16:11:28.364  INFO 22616 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-21 16:11:28.390  INFO 22616 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-03-21 16:11:29.298  INFO 22616 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-21 16:11:29.308  INFO 22616 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-21 16:11:29.378  INFO 22616 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-21 16:11:29.973  WARN 22616 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'commentServiceImpl': Unsatisfied dependency expressed through field 'commentRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commentRepository' defined in com.bs.blog.dao.CommentRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort)! Method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort) expects at least 2 arguments but only found 1. This leaves an operator of type NEGATING_SIMPLE_PROPERTY for property parentComment unbound.
+2021-03-21 16:11:29.973  INFO 22616 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-21 16:11:29.978  INFO 22616 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-21 16:11:29.991  INFO 22616 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-21 16:11:29.994  INFO 22616 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-03-21 16:11:30.007  INFO 22616 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-03-21 16:11:30.035 ERROR 22616 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'commentServiceImpl': Unsatisfied dependency expressed through field 'commentRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commentRepository' defined in com.bs.blog.dao.CommentRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort)! Method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort) expects at least 2 arguments but only found 1. This leaves an operator of type NEGATING_SIMPLE_PROPERTY for property parentComment unbound.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:582)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.bs.blog.BlogApplication.main(BlogApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commentRepository' defined in com.bs.blog.dao.CommentRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort)! Method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort) expects at least 2 arguments but only found 1. This leaves an operator of type NEGATING_SIMPLE_PROPERTY for property parentComment unbound.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 26 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort)! Method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort) expects at least 2 arguments but only found 1. This leaves an operator of type NEGATING_SIMPLE_PROPERTY for property parentComment unbound.
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:107)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:218)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:81)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:100)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:93)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1049)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:85)
+	at java.util.Optional.map(Optional.java:215)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:85)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:303)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 36 common frames omitted
+Caused by: java.lang.IllegalStateException: Method public abstract java.util.List com.bs.blog.dao.CommentRepository.findByBlogIdAndParentCommentNot(java.lang.Long,org.springframework.data.domain.Sort) expects at least 2 arguments but only found 1. This leaves an operator of type NEGATING_SIMPLE_PROPERTY for property parentComment unbound.
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.throwExceptionOnArgumentMismatch(PartTreeJpaQuery.java:161)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.validate(PartTreeJpaQuery.java:147)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:90)
+	... 62 common frames omitted
+
+2021-03-21 16:13:25.913  INFO 7976 --- [restartedMain] com.bs.blog.BlogApplication              : Starting BlogApplication using Java 1.8.0_211 on DESKTOP-QN6R9BR with PID 7976 (C:\Users\王也\Desktop\2020毕设\blog\target\classes started by 王也 in C:\Users\王也\Desktop\2020毕设\blog)
+2021-03-21 16:13:25.916 DEBUG 7976 --- [restartedMain] com.bs.blog.BlogApplication              : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-21 16:13:25.916  INFO 7976 --- [restartedMain] com.bs.blog.BlogApplication              : The following profiles are active: dev
+2021-03-21 16:13:25.966  INFO 7976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-21 16:13:25.967  INFO 7976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-21 16:13:26.963  INFO 7976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-21 16:13:27.077  INFO 7976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 5 JPA repository interfaces.
+2021-03-21 16:13:27.270  WARN 7976 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bs.blog]' package. Please check your configuration.
+2021-03-21 16:13:28.111  INFO 7976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-21 16:13:28.123  INFO 7976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-21 16:13:28.124  INFO 7976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-21 16:13:28.231  INFO 7976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-21 16:13:28.231  INFO 7976 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2263 ms
+2021-03-21 16:13:28.458  INFO 7976 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-21 16:13:28.516  INFO 7976 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-21 16:13:28.677  INFO 7976 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-21 16:13:28.839  INFO 7976 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-21 16:13:28.841  WARN 7976 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-03-21 16:13:29.103  INFO 7976 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-21 16:13:29.133  INFO 7976 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-03-21 16:13:30.244  INFO 7976 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-21 16:13:30.254  INFO 7976 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-21 16:13:30.324  INFO 7976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-21 16:13:31.591  WARN 7976 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-21 16:13:31.871  INFO 7976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-21 16:13:32.090  INFO 7976 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-03-21 16:13:33.152  INFO 7976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-21 16:13:33.171  INFO 7976 --- [restartedMain] com.bs.blog.BlogApplication              : Started BlogApplication in 7.963 seconds (JVM running for 11.526)
+2021-03-21 16:13:36.952  INFO 7976 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-21 16:13:36.952  INFO 7976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-21 16:13:36.954  INFO 7976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-03-21 16:13:37.025  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2021-03-21 16:13:37.488  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {} index
+2021-03-21 16:13:37.489  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:13:40.594  INFO 7976 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-21 16:13:40.770  INFO 7976 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-21 16:13:40.771  INFO 7976 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:13:41.740  INFO 7976 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:13:41.857  INFO 7976 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:13:41.857  INFO 7976 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:15:15.859  INFO 7976 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-21 16:15:15.869  INFO 7976 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-21 16:15:15.869  INFO 7976 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:15:16.648  INFO 7976 --- [http-nio-8080-exec-8] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:15:16.672  INFO 7976 --- [http-nio-8080-exec-8] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:15:16.672  INFO 7976 --- [http-nio-8080-exec-8] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:15:40.972  INFO 7976 --- [http-nio-8080-exec-6] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.post', args=[Comment{id=null, nickname='也', email='wy15566927935@126.com', content='111', avatar='null', createTime=null}]}
+2021-03-21 16:15:41.075  INFO 7976 --- [http-nio-8080-exec-6] com.bs.blog.aspect.LogAspect             : Result : {} redirect:/comments/16
+2021-03-21 16:15:41.075  INFO 7976 --- [http-nio-8080-exec-6] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:15:41.091  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:15:41.105  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:15:41.106  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:16:57.864  INFO 7976 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-21 16:16:57.871  INFO 7976 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-21 16:16:57.871  INFO 7976 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:16:58.475  INFO 7976 --- [http-nio-8080-exec-6] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:16:58.492  INFO 7976 --- [http-nio-8080-exec-6] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:16:58.492  INFO 7976 --- [http-nio-8080-exec-6] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:22:10.583  INFO 7976 --- [Thread-11] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-21 16:22:10.585  INFO 7976 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-21 16:22:10.590  INFO 7976 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-21 16:22:10.600  INFO 7976 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-21 16:22:10.883  INFO 7976 --- [restartedMain] com.bs.blog.BlogApplication              : Starting BlogApplication using Java 1.8.0_211 on DESKTOP-QN6R9BR with PID 7976 (C:\Users\王也\Desktop\2020毕设\blog\target\classes started by 王也 in C:\Users\王也\Desktop\2020毕设\blog)
+2021-03-21 16:22:10.883 DEBUG 7976 --- [restartedMain] com.bs.blog.BlogApplication              : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-21 16:22:10.883  INFO 7976 --- [restartedMain] com.bs.blog.BlogApplication              : The following profiles are active: dev
+2021-03-21 16:22:11.152  INFO 7976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-21 16:22:11.191  INFO 7976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 5 JPA repository interfaces.
+2021-03-21 16:22:11.248  WARN 7976 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bs.blog]' package. Please check your configuration.
+2021-03-21 16:22:11.532  INFO 7976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-21 16:22:11.536  INFO 7976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-21 16:22:11.536  INFO 7976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-21 16:22:11.559  INFO 7976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-21 16:22:11.559  INFO 7976 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 673 ms
+2021-03-21 16:22:11.693  INFO 7976 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-21 16:22:11.708  INFO 7976 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-03-21 16:22:11.708  WARN 7976 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-03-21 16:22:11.716  INFO 7976 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-03-21 16:22:11.718  INFO 7976 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-03-21 16:22:11.876  INFO 7976 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-21 16:22:11.876  INFO 7976 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-21 16:22:11.923  INFO 7976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-21 16:22:12.690  WARN 7976 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-21 16:22:12.871  INFO 7976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-21 16:22:12.927  INFO 7976 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-03-21 16:22:13.178  INFO 7976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-21 16:22:13.185  INFO 7976 --- [restartedMain] com.bs.blog.BlogApplication              : Started BlogApplication in 2.348 seconds (JVM running for 531.54)
+2021-03-21 16:22:13.188  INFO 7976 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-03-21 16:22:13.219  INFO 7976 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-21 16:22:13.221  INFO 7976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-21 16:22:13.222  INFO 7976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-03-21 16:22:13.226  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-21 16:22:13.249  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-21 16:22:13.250  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:22:13.873  INFO 7976 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:22:13.906  INFO 7976 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:22:13.907  INFO 7976 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:33:29.044  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-21 16:33:29.053  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-21 16:33:29.054  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:33:29.669  INFO 7976 --- [http-nio-8080-exec-7] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:33:29.689  INFO 7976 --- [http-nio-8080-exec-7] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:33:29.689  INFO 7976 --- [http-nio-8080-exec-7] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:42:40.848  INFO 7976 --- [Thread-24] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-21 16:42:40.849  INFO 7976 --- [Thread-24] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-21 16:42:40.852  INFO 7976 --- [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-03-21 16:42:40.859  INFO 7976 --- [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-03-21 16:42:41.154  INFO 7976 --- [restartedMain] com.bs.blog.BlogApplication              : Starting BlogApplication using Java 1.8.0_211 on DESKTOP-QN6R9BR with PID 7976 (C:\Users\王也\Desktop\2020毕设\blog\target\classes started by 王也 in C:\Users\王也\Desktop\2020毕设\blog)
+2021-03-21 16:42:41.155 DEBUG 7976 --- [restartedMain] com.bs.blog.BlogApplication              : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-21 16:42:41.155  INFO 7976 --- [restartedMain] com.bs.blog.BlogApplication              : The following profiles are active: dev
+2021-03-21 16:42:41.408  INFO 7976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-21 16:42:41.446  INFO 7976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 5 JPA repository interfaces.
+2021-03-21 16:42:41.489  WARN 7976 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bs.blog]' package. Please check your configuration.
+2021-03-21 16:42:41.636  INFO 7976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-21 16:42:41.638  INFO 7976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-21 16:42:41.639  INFO 7976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-21 16:42:41.703  INFO 7976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-21 16:42:41.703  INFO 7976 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 545 ms
+2021-03-21 16:42:41.779  INFO 7976 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-21 16:42:41.783  INFO 7976 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2021-03-21 16:42:41.784  WARN 7976 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-03-21 16:42:41.790  INFO 7976 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2021-03-21 16:42:41.791  INFO 7976 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-03-21 16:42:42.069  INFO 7976 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-21 16:42:42.070  INFO 7976 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-21 16:42:42.112  INFO 7976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-21 16:42:42.797  WARN 7976 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-21 16:42:43.061  INFO 7976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-21 16:42:43.124  INFO 7976 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-03-21 16:42:43.432  INFO 7976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-21 16:42:43.441  INFO 7976 --- [restartedMain] com.bs.blog.BlogApplication              : Started BlogApplication in 2.335 seconds (JVM running for 1761.796)
+2021-03-21 16:42:43.443  INFO 7976 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-03-21 16:42:43.598  INFO 7976 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-21 16:42:43.599  INFO 7976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-21 16:42:43.602  INFO 7976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-03-21 16:42:43.607  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='127.0.0.1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-21 16:42:43.626  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-21 16:42:43.626  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:42:44.341  INFO 7976 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='127.0.0.1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:42:44.375  INFO 7976 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:42:44.376  INFO 7976 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:42:47.379  INFO 7976 --- [Thread-29] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-21 16:42:47.380  INFO 7976 --- [Thread-29] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-21 16:42:47.381  INFO 7976 --- [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2021-03-21 16:42:47.388  INFO 7976 --- [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2021-03-21 16:42:47.663  INFO 7976 --- [restartedMain] com.bs.blog.BlogApplication              : Starting BlogApplication using Java 1.8.0_211 on DESKTOP-QN6R9BR with PID 7976 (C:\Users\王也\Desktop\2020毕设\blog\target\classes started by 王也 in C:\Users\王也\Desktop\2020毕设\blog)
+2021-03-21 16:42:47.664 DEBUG 7976 --- [restartedMain] com.bs.blog.BlogApplication              : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-21 16:42:47.664  INFO 7976 --- [restartedMain] com.bs.blog.BlogApplication              : The following profiles are active: dev
+2021-03-21 16:42:47.898  INFO 7976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-21 16:42:47.938  INFO 7976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 5 JPA repository interfaces.
+2021-03-21 16:42:47.984  WARN 7976 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bs.blog]' package. Please check your configuration.
+2021-03-21 16:42:48.113  INFO 7976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-21 16:42:48.114  INFO 7976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-21 16:42:48.114  INFO 7976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-21 16:42:48.129  INFO 7976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-21 16:42:48.129  INFO 7976 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 462 ms
+2021-03-21 16:42:48.210  INFO 7976 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-21 16:42:48.215  INFO 7976 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2021-03-21 16:42:48.215  WARN 7976 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-03-21 16:42:48.221  INFO 7976 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2021-03-21 16:42:48.221  INFO 7976 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-03-21 16:42:48.340  INFO 7976 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-21 16:42:48.340  INFO 7976 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-21 16:42:48.384  INFO 7976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-21 16:42:48.899  WARN 7976 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-21 16:42:49.077  INFO 7976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-21 16:42:49.138  INFO 7976 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-03-21 16:42:49.392  INFO 7976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-21 16:42:49.396  INFO 7976 --- [restartedMain] com.bs.blog.BlogApplication              : Started BlogApplication in 1.777 seconds (JVM running for 1767.751)
+2021-03-21 16:42:49.398  INFO 7976 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-03-21 16:42:58.294  INFO 7976 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-21 16:42:58.296  INFO 7976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-21 16:42:58.297  INFO 7976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-03-21 16:42:58.305  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2021-03-21 16:42:58.339  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {} index
+2021-03-21 16:42:58.340  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:42:59.890  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-21 16:42:59.903  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-21 16:42:59.903  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:43:00.716  INFO 7976 --- [http-nio-8080-exec-8] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:43:00.753  INFO 7976 --- [http-nio-8080-exec-8] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:43:00.754  INFO 7976 --- [http-nio-8080-exec-8] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:44:52.545  INFO 7976 --- [http-nio-8080-exec-7] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-21 16:44:52.551  INFO 7976 --- [http-nio-8080-exec-7] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-21 16:44:52.551  INFO 7976 --- [http-nio-8080-exec-7] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:44:53.192  INFO 7976 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:44:53.203  INFO 7976 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:44:53.203  INFO 7976 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:45:25.595  INFO 7976 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.post', args=[Comment{id=null, nickname='王也', email='wy15566927935@126.com', content='很好', avatar='null', createTime=null, blog=Blog{id=16, title='null', content='null', firstPicture='null', flag='null', views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComments=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@2b98ab26]}
+2021-03-21 16:45:25.615  INFO 7976 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : Result : {} redirect:/comments/16
+2021-03-21 16:45:25.616  INFO 7976 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:45:25.633  INFO 7976 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:45:25.646  INFO 7976 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:45:25.647  INFO 7976 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:45:35.540  INFO 7976 --- [http-nio-8080-exec-6] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.post', args=[Comment{id=null, nickname='王也', email='wy15566927935@126.com', content='还不错', avatar='null', createTime=null, blog=Blog{id=16, title='null', content='null', firstPicture='null', flag='null', views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replyComments=[], parentComment=Comment{id=17, nickname='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComments=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@2b98ab26]}
+2021-03-21 16:45:35.558  INFO 7976 --- [http-nio-8080-exec-6] com.bs.blog.aspect.LogAspect             : Result : {} redirect:/comments/16
+2021-03-21 16:45:35.558  INFO 7976 --- [http-nio-8080-exec-6] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:45:35.562  INFO 7976 --- [http-nio-8080-exec-7] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:45:35.577  INFO 7976 --- [http-nio-8080-exec-7] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:45:35.577  INFO 7976 --- [http-nio-8080-exec-7] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:47:23.660  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-21 16:47:23.665  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-21 16:47:23.665  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:47:24.325  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:47:24.345  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:47:24.345  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:47:41.478  INFO 7976 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.post', args=[Comment{id=null, nickname='王也', email='wy15566927935@126.com', content='还好
+', avatar='null', createTime=null, blog=Blog{id=16, title='null', content='null', firstPicture='null', flag='null', views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replyComments=[], parentComment=Comment{id=21, nickname='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComments=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@2b98ab26]}
+2021-03-21 16:47:41.497  INFO 7976 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : Result : {} redirect:/comments/16
+2021-03-21 16:47:41.498  INFO 7976 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:47:41.504  INFO 7976 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:47:41.521  INFO 7976 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:47:41.521  INFO 7976 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:48:08.237  INFO 7976 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.post', args=[Comment{id=null, nickname='王也', email='wy15566927935@126.com', content='不好', avatar='null', createTime=null, blog=Blog{id=16, title='null', content='null', firstPicture='null', flag='null', views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replyComments=[], parentComment=Comment{id=21, nickname='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComments=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@2b98ab26]}
+2021-03-21 16:48:08.258  INFO 7976 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : Result : {} redirect:/comments/16
+2021-03-21 16:48:08.258  INFO 7976 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:48:08.267  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:48:08.286  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:48:08.287  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:54:26.704  INFO 7976 --- [Thread-34] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-21 16:54:26.705  INFO 7976 --- [Thread-34] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-21 16:54:26.706  INFO 7976 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2021-03-21 16:54:26.713  INFO 7976 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2021-03-21 16:54:27.034  INFO 7976 --- [restartedMain] com.bs.blog.BlogApplication              : Starting BlogApplication using Java 1.8.0_211 on DESKTOP-QN6R9BR with PID 7976 (C:\Users\王也\Desktop\2020毕设\blog\target\classes started by 王也 in C:\Users\王也\Desktop\2020毕设\blog)
+2021-03-21 16:54:27.035 DEBUG 7976 --- [restartedMain] com.bs.blog.BlogApplication              : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-21 16:54:27.035  INFO 7976 --- [restartedMain] com.bs.blog.BlogApplication              : The following profiles are active: dev
+2021-03-21 16:54:27.452  INFO 7976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-21 16:54:27.506  INFO 7976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 5 JPA repository interfaces.
+2021-03-21 16:54:27.574  WARN 7976 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bs.blog]' package. Please check your configuration.
+2021-03-21 16:54:27.752  INFO 7976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-21 16:54:27.753  INFO 7976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-21 16:54:27.753  INFO 7976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-21 16:54:27.771  INFO 7976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-21 16:54:27.771  INFO 7976 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 730 ms
+2021-03-21 16:54:27.903  INFO 7976 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-21 16:54:27.909  INFO 7976 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2021-03-21 16:54:27.909  WARN 7976 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-03-21 16:54:27.916  INFO 7976 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2021-03-21 16:54:27.916  INFO 7976 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-03-21 16:54:28.025  INFO 7976 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-21 16:54:28.025  INFO 7976 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-21 16:54:28.070  INFO 7976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-21 16:54:28.784  WARN 7976 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-21 16:54:28.981  INFO 7976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-21 16:54:29.041  INFO 7976 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-03-21 16:54:29.296  INFO 7976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-21 16:54:29.303  INFO 7976 --- [restartedMain] com.bs.blog.BlogApplication              : Started BlogApplication in 2.324 seconds (JVM running for 2467.658)
+2021-03-21 16:54:29.306  INFO 7976 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-03-21 16:54:39.054  INFO 7976 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-21 16:54:39.055  INFO 7976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-21 16:54:39.056  INFO 7976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-03-21 16:54:39.060  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-21 16:54:39.148  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-21 16:54:39.148  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:54:39.866  INFO 7976 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:54:39.909  INFO 7976 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:54:39.909  INFO 7976 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:54:45.708  INFO 7976 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-21 16:54:45.729  INFO 7976 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-21 16:54:45.730  INFO 7976 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:54:46.387  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:54:46.411  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:54:46.411  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:54:49.019  INFO 7976 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-21 16:54:49.031  INFO 7976 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-21 16:54:49.031  INFO 7976 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:54:49.668  INFO 7976 --- [http-nio-8080-exec-8] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-21 16:54:49.688  INFO 7976 --- [http-nio-8080-exec-8] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:54:49.688  INFO 7976 --- [http-nio-8080-exec-8] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:54:56.840  INFO 7976 --- [http-nio-8080-exec-10] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2021-03-21 16:54:56.869  INFO 7976 --- [http-nio-8080-exec-10] com.bs.blog.aspect.LogAspect             : Result : {} index
+2021-03-21 16:54:56.869  INFO 7976 --- [http-nio-8080-exec-10] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:54:59.973  INFO 7976 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/12', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[12, {}]}
+2021-03-21 16:54:59.984  INFO 7976 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-21 16:54:59.984  INFO 7976 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:55:00.736  INFO 7976 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/12', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[12, {}]}
+2021-03-21 16:55:00.738  INFO 7976 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:55:00.738  INFO 7976 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:55:17.520  INFO 7976 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2021-03-21 16:55:17.539  INFO 7976 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : Result : {} index
+2021-03-21 16:55:17.539  INFO 7976 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:55:21.834  INFO 7976 --- [http-nio-8080-exec-6] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/12', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[12, {}]}
+2021-03-21 16:55:21.841  INFO 7976 --- [http-nio-8080-exec-6] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-21 16:55:21.842  INFO 7976 --- [http-nio-8080-exec-6] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:55:22.536  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/12', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[12, {}]}
+2021-03-21 16:55:22.539  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-21 16:55:22.539  INFO 7976 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-21 16:55:24.718  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2021-03-21 16:55:24.735  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {} index
+2021-03-21 16:55:24.735  INFO 7976 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : --------doAfter---------

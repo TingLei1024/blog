@@ -1,0 +1,6 @@
+2021-02-24 20:22:55.635  INFO 18152 --- [restartedMain] com.bs.blog.BlogApplication              : Starting BlogApplication using Java 1.8.0_211 on DESKTOP-QN6R9BR with PID 18152 (C:\Users\王也\Desktop\2020毕设\blog\target\classes started by 王也 in C:\Users\王也\Desktop\2020毕设\blog)
+2021-02-24 20:22:55.638  INFO 18152 --- [restartedMain] com.bs.blog.BlogApplication              : The following profiles are active: pro
+2021-02-24 20:22:56.735  WARN 18152 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bs.blog]' package. Please check your configuration.
+2021-02-24 20:22:58.105  WARN 18152 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-02-24 20:22:58.567  WARN 18152 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-24 20:22:59.063  INFO 18152 --- [restartedMain] com.bs.blog.BlogApplication              : Started BlogApplication in 4.27 seconds (JVM running for 7.787)

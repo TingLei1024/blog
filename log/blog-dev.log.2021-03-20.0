@@ -1,0 +1,124 @@
+2021-03-20 11:17:52.522  INFO 12044 --- [restartedMain] com.bs.blog.BlogApplication              : Starting BlogApplication using Java 1.8.0_211 on DESKTOP-QN6R9BR with PID 12044 (C:\Users\王也\Desktop\2020毕设\blog\target\classes started by 王也 in C:\Users\王也\Desktop\2020毕设\blog)
+2021-03-20 11:17:52.562 DEBUG 12044 --- [restartedMain] com.bs.blog.BlogApplication              : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-20 11:17:52.562  INFO 12044 --- [restartedMain] com.bs.blog.BlogApplication              : The following profiles are active: dev
+2021-03-20 11:17:52.922  INFO 12044 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-20 11:17:52.922  INFO 12044 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-20 11:17:56.658  INFO 12044 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-20 11:17:56.828  INFO 12044 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 157 ms. Found 4 JPA repository interfaces.
+2021-03-20 11:17:57.158  WARN 12044 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bs.blog]' package. Please check your configuration.
+2021-03-20 11:17:58.719  INFO 12044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-20 11:17:58.769  INFO 12044 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-20 11:17:58.769  INFO 12044 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-20 11:17:58.929  INFO 12044 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-20 11:17:58.929  INFO 12044 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6007 ms
+2021-03-20 11:17:59.447  INFO 12044 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-20 11:17:59.597  INFO 12044 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-20 11:17:59.887  INFO 12044 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-20 11:18:00.191  INFO 12044 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-20 11:18:00.191  WARN 12044 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-03-20 11:18:00.851  INFO 12044 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-20 11:18:00.911  INFO 12044 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-03-20 11:18:02.538  INFO 12044 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-20 11:18:02.568  INFO 12044 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-20 11:18:02.638  INFO 12044 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-20 11:18:03.849  WARN 12044 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-20 11:18:04.149  INFO 12044 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 11:18:04.359  INFO 12044 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-03-20 11:18:05.285  INFO 12044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 11:18:05.305  INFO 12044 --- [restartedMain] com.bs.blog.BlogApplication              : Started BlogApplication in 15.021 seconds (JVM running for 23.681)
+2021-03-20 11:18:43.039  INFO 12044 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-20 11:18:43.040  INFO 12044 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-20 11:18:43.041  INFO 12044 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-03-20 11:18:43.156  INFO 12044 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2021-03-20 11:18:44.023  INFO 12044 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {} index
+2021-03-20 11:18:44.024  INFO 12044 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 11:27:30.389  INFO 12044 --- [http-nio-8080-exec-8] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-20 11:27:30.607  INFO 12044 --- [http-nio-8080-exec-8] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-20 11:27:30.608  INFO 12044 --- [http-nio-8080-exec-8] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:01:23.184  INFO 13196 --- [restartedMain] com.bs.blog.BlogApplication              : Starting BlogApplication using Java 1.8.0_211 on DESKTOP-QN6R9BR with PID 13196 (C:\Users\王也\Desktop\2020毕设\blog\target\classes started by 王也 in C:\Users\王也\Desktop\2020毕设\blog)
+2021-03-20 12:01:23.198 DEBUG 13196 --- [restartedMain] com.bs.blog.BlogApplication              : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-20 12:01:23.198  INFO 13196 --- [restartedMain] com.bs.blog.BlogApplication              : The following profiles are active: dev
+2021-03-20 12:01:23.305  INFO 13196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-20 12:01:23.306  INFO 13196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-20 12:01:25.196  INFO 13196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-20 12:01:25.387  INFO 13196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 158 ms. Found 5 JPA repository interfaces.
+2021-03-20 12:01:25.662  WARN 13196 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bs.blog]' package. Please check your configuration.
+2021-03-20 12:01:26.975  INFO 13196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-20 12:01:27.001  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-20 12:01:27.002  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-20 12:01:27.156  INFO 13196 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-20 12:01:27.157  INFO 13196 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3843 ms
+2021-03-20 12:01:27.586  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-20 12:01:27.699  INFO 13196 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-20 12:01:28.100  INFO 13196 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-20 12:01:28.393  INFO 13196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-20 12:01:28.394  WARN 13196 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-03-20 12:01:28.779  INFO 13196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-20 12:01:28.839  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-03-20 12:01:30.337  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-20 12:01:30.350  INFO 13196 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-20 12:01:30.433  INFO 13196 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-20 12:01:31.514  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-20 12:01:31.785  INFO 13196 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 12:01:31.934  INFO 13196 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-03-20 12:01:32.729  INFO 13196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 12:01:32.740  INFO 13196 --- [restartedMain] com.bs.blog.BlogApplication              : Started BlogApplication in 10.836 seconds (JVM running for 16.426)
+2021-03-20 12:01:56.176  INFO 13196 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-20 12:01:56.176  INFO 13196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-20 12:01:56.178  INFO 13196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-03-20 12:01:56.284  INFO 13196 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-20 12:01:56.529  INFO 13196 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-20 12:01:56.529  INFO 13196 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:02:24.988  INFO 13196 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-20 12:02:24.999  INFO 13196 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-20 12:02:24.999  INFO 13196 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:04:16.576  INFO 13196 --- [http-nio-8080-exec-10] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-20 12:04:16.597  INFO 13196 --- [http-nio-8080-exec-10] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-20 12:04:16.598  INFO 13196 --- [http-nio-8080-exec-10] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:04:27.002  INFO 13196 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.post', args=[Comment{id=null, nickname='王也', email='wy15566927935@126.com', content='不错', avatar='null', createTime=null}]}
+2021-03-20 12:04:27.129  INFO 13196 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : Result : {} redirect:/comments/16
+2021-03-20 12:04:27.129  INFO 13196 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:04:27.147  INFO 13196 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-20 12:04:27.318  INFO 13196 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-20 12:04:27.319  INFO 13196 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:05:53.066  INFO 13196 --- [http-nio-8080-exec-10] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-20 12:05:53.077  INFO 13196 --- [http-nio-8080-exec-10] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-20 12:05:53.077  INFO 13196 --- [http-nio-8080-exec-10] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:05:58.862  INFO 13196 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-20 12:05:58.869  INFO 13196 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-20 12:05:58.870  INFO 13196 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:06:09.272  INFO 13196 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.post', args=[Comment{id=null, nickname='王也', email='wy15566927935@126.com', content='不错', avatar='null', createTime=null}]}
+2021-03-20 12:06:09.295  INFO 13196 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : Result : {} redirect:/comments/16
+2021-03-20 12:06:09.295  INFO 13196 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:06:09.300  INFO 13196 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-20 12:06:09.310  INFO 13196 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-20 12:06:09.310  INFO 13196 --- [http-nio-8080-exec-9] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:06:16.861  INFO 13196 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-20 12:06:16.869  INFO 13196 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-20 12:06:16.870  INFO 13196 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:08:01.851  INFO 13196 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-20 12:08:01.860  INFO 13196 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-20 12:08:01.861  INFO 13196 --- [http-nio-8080-exec-4] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:08:16.689  INFO 13196 --- [http-nio-8080-exec-7] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.post', args=[Comment{id=null, nickname='王也', email='wy15566927935@126.com', content='号', avatar='null', createTime=null}]}
+2021-03-20 12:08:16.709  INFO 13196 --- [http-nio-8080-exec-7] com.bs.blog.aspect.LogAspect             : Result : {} redirect:/comments/16
+2021-03-20 12:08:16.709  INFO 13196 --- [http-nio-8080-exec-7] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:08:16.714  INFO 13196 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-20 12:08:16.721  INFO 13196 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-20 12:08:16.721  INFO 13196 --- [http-nio-8080-exec-3] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:08:29.254  INFO 13196 --- [http-nio-8080-exec-6] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.post', args=[Comment{id=null, nickname='王也1', email='wy15566927935@126.com', content='不错', avatar='null', createTime=null}]}
+2021-03-20 12:08:29.279  INFO 13196 --- [http-nio-8080-exec-6] com.bs.blog.aspect.LogAspect             : Result : {} redirect:/comments/16
+2021-03-20 12:08:29.279  INFO 13196 --- [http-nio-8080-exec-6] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:08:29.284  INFO 13196 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-20 12:08:29.292  INFO 13196 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-20 12:08:29.293  INFO 13196 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:13:56.339  INFO 13196 --- [http-nio-8080-exec-7] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-20 12:13:56.349  INFO 13196 --- [http-nio-8080-exec-7] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-20 12:13:56.350  INFO 13196 --- [http-nio-8080-exec-7] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:14:56.000  INFO 13196 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/blog/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.blog', args=[16, {}]}
+2021-03-20 12:14:56.007  INFO 13196 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : Result : {} blog
+2021-03-20 12:14:56.008  INFO 13196 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 12:14:56.752  INFO 13196 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/comments/16', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.CommentController.comments', args=[16, {}]}
+2021-03-20 12:14:56.762  INFO 13196 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : Result : {} blog :: commentList
+2021-03-20 12:14:56.762  INFO 13196 --- [http-nio-8080-exec-5] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-20 13:36:01.532  WARN 13196 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h10m2s96ms756µs900ns).
+2021-03-20 17:54:44.758  WARN 13196 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=44m42s742ms190µs100ns).

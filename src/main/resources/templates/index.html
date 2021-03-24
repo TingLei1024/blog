@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>首页</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
+	<link rel="stylesheet" href="../static/css/index.css">
+
+</head>
+<body>
+	<!--导航-->
+	<nav th:replace="_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+		<div class="ui container">
+			<div class="ui inverted secondary stackable menu">
+				<h2 class="ui olive header item">Blog</h2>
+				<a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>首页</a>
+				<a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
+				<a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+				<a href="#" class="m-item item m-mobile-hide"><i class="clone icon"></i>归档</a>
+				<a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
+				<a href="#" class="m-item item m-mobile-hide"><i class="map icon"></i>疫情地图</a>
+				<div class="m-item right item m-mobile-hide">
+					<div class="ui icon inverted transparent input">
+						<input type="text" placeholder="Search..." />
+						<i class="search link icon"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="ui menu toggle button icon black m-top-right m-mobile-show">
+			<i class="sidebar icon "></i>
+		</a>
+	</nav>
+	<!-- 中间部分 -->
+	<div class="m-padded-tb-large m-container">
+		<div class="ui container">
+			<div class="ui stackable grid">
+				<!-- 左边 -->
+				<div class="eleven wide column">
+					<!-- header -->
+					<div class="ui top attached segment">
+						<div class="ui middle aligned two column grid">
+							<div class="column">
+								<h3 class="ui teal header">博客</h3>
+							</div>
+							<div class="right aligned column">
+								共 <h2 class="ui orange header m-inline-block" th:text="${page.totalElements}">14</h2> 篇
+							</div>
+						</div>
+					</div>
+					<!-- content -->
+					<div class="ui attached segment">
+						<div class="ui padded vertical segment m-padded-tb-big" th:each="blog : ${page.content}">
+							<div class="ui middle aligned mobile reversed stackable grid">
+								<div class="eleven wide column">
+									<h3 class="ui header"><a href="#" target="_blank" th:href="@{/blog/{id}(id=${blog.id})}" class="m-black" th:text="${blog.title}">得全栈开发者得天下</a></h3>
+									<p th:text="|${blog.description}......|">据 Hacker Rank 2020 开发人员技能报告显示，去年全球软件市场第一大需求为全栈开发人员，其次是后端开发人员。在参与调查的公司中，有 38% 的 HR 表示，2020 年的头等要务是招聘全栈开发人员 ，小型公司（1-49名员工）尤为如此：43% 的小型公司将纳入全栈开发人员视为重中之重。</p>
+									<div class="ui stackable grid">
+										<div class="eleven wide column">
+											<div class="ui mini horizontal link list">
+												<div class="item">
+													<img src="https://picsum.photos/id/1025/100/100" th:src="@{${blog.user.avatar}}" class="ui avatar image"/>
+													<div class="content"><a href="#" class="header" th:text="${blog.user.nickname}">王也</a></div>
+												</div>
+												<div class="item">
+													<i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2021-01-07</span>
+												</div>
+												<div class="item">
+													<i class="eye icon"></i><span th:text="${blog.views}">100</span>
+												</div>
+											</div>
+										</div>
+										<div class="right aligned five wide column">
+											<a href="#" target="_blank" class="ui teal basic label m-padded-tiny" th:text="${blog.type.name}">认知升级</a>
+										</div>
+									</div>
+								</div>
+								<div class="ui five wide column">
+									<a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+										<img src="https://picsum.photos/id/1010/800/450" th:src="@{${blog.firstPicture}}" class="ui rounded image" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- footer -->
+					<div class="ui bottom attached segment">
+						<div class="ui middle aligned two column grid" th:if="${page.totalPages}>1">
+							<div class="column">
+								<a href="#" th:href="@{/(page=${page.number}-1)}" th:unless="${page.first}" class="ui mini teal basic button">上一页</a>
+							</div>
+							<div class="right aligned column">
+								<a href="#" th:href="@{/(page=${page.number}+1)}" th:unless="${page.last}" class="ui mini teal basic button">下一页</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 右边 -->
+				<div class="ui five wide column">
+					<!-- 分类 -->
+					<div class="ui segments">
+						<div class="ui secondary segment">
+							<div class="ui two column grid">
+								<div class="column">
+									<i class="idea icon"></i>分类
+								</div>
+								<div class="right aligned column">
+									<a href="#" th:href="@{/types/-1}" target="_blank">more<i class="angle double right icon"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="ui teal segment">
+							<div class="ui fluid vertical menu">
+								<a href="#" target="_blank" th:href="@{/types/{id}(id=${type.id})}" class="item" th:each="type : ${types}">
+									<span th:text="${type.name}">学习日志</span>
+									<div class="ui teal basic left pointing label" th:text="${#arrays.length(type.blogs)}">12</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- 标签 -->
+					<div class="ui segments m-margin-tb-large">
+						<div class="ui secondary segment">
+							<div class="ui two column grid">
+								<div class="column">
+									<i class="tags icon"></i>标签
+								</div>
+								<div class="right aligned column">
+									<a href="#" th:href="@{/tags/-1}" target="_blank">more<i class="angle double right icon"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="ui teal segment">
+							<a href="#" target="_blank" th:href="@{/tags/{id}(id=${tag.id})}" class="ui teal basic left pointing label m-margin-tb-mini" th:each="tag : ${tags}">
+								<span th:text="${tag.name}">Java</span><div class="detail" th:text="${#arrays.length(tag.blogs)}">13</div>
+							</a>
+						</div>
+					</div>
+					<!-- 最新推荐 -->
+					<div class="ui segments">
+						<div class="ui secondary segment">
+							<div class="ui two column grid">
+								<div class="column">
+									<i class="bookmark icon"></i>最新推荐
+								</div>
+								<div class="right aligned column">
+									<a href="#"target="_blank">more<i class="angle double right icon"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segment" th:each="blog : ${recommendBlogs}">
+							<a href="#" th:href="@{/blog/{id}(id = ${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">用户故事</a>
+						</div>
+					</div>
+					<!-- 二维码 -->
+					<h4 class="ui horizontal divider header m-margin-top-large">扫码关注我</h4>
+					<div class="ui card centered" style="width: 150px;">
+						<img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" class="ui rounded image"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br />
+	<br />
+	<!-- 底部 -->
+	<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+		<div class="ui center aligned container">
+			<div class="ui inverted divided stackable grid m-text-spaced">
+				<div class="three wide column">
+					<div class="ui inverted link list">
+						<div class="item">
+							<img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" class="ui rounded image" style="width:120px" />
+						</div>
+					</div>
+				</div>
+				<div class="four wide column">
+					<h4 class="ui inverted header m-text-spaced m-opacity-mini">最新博客</h4>
+					<div class="ui inverted link list">
+						<a href="#" class="item">qqq</a>
+						<a href="#" class="item">qqq</a>
+						<a href="#" class="item">qqq</a>
+					</div>
+				</div>
+				<div class="four wide column">
+					<h4 class="ui inverted header m-text-spaced m-opacity-mini">联系我</h4>
+					<div class="ui inverted link list">
+						<a href="#" class="item">Email:tinglei1024@gmail.com</a>
+						<a href="#" class="item">QQ:754933731</a>
+					</div>
+				</div>
+				<div class="five wide column">
+					<h4 class="ui inverted header m-text-spaced m-opacity-mini">Blog</h4>
+					<div class="ui inverted link list icon">
+						<a href="https://github.com/" class="item" target="_blank"><i class="github icon"></i>&nbsp;&nbsp;Github</a>
+						<a href="https://store.steampowered.com/" class="item" target="_blank"><i class="steam icon"></i>&nbsp;&nbsp;Steam</a>
+						<a href="https://linux.cn/" class="item" target="_blank"><i class="linux icon"></i>&nbsp;&nbsp;Linux</a>
+					</div>
+				</div>
+			</div>
+			<div class="ui inverted section divider"></div>
+			<p class="m-text-thin m-text-spaced m-opacity-tiny"><i class="copyright outline icon"></i>2021 WangYe</p>
+		</div>
+	</footer>
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+<script>
+	$('.menu.toggle').click(function(){
+		$('.m-item').toggleClass('m-mobile-hide');
+	});
+</script>
+</body>
+</html>

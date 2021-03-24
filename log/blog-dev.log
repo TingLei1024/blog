@@ -1,0 +1,37 @@
+2021-03-24 13:52:59.388  INFO 14072 --- [restartedMain] com.bs.blog.BlogApplication              : Starting BlogApplication using Java 1.8.0_211 on DESKTOP-QN6R9BR with PID 14072 (C:\Users\王也\Desktop\2020毕设\blog\target\classes started by 王也 in C:\Users\王也\Desktop\2020毕设\blog)
+2021-03-24 13:52:59.395 DEBUG 14072 --- [restartedMain] com.bs.blog.BlogApplication              : Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-24 13:52:59.397  INFO 14072 --- [restartedMain] com.bs.blog.BlogApplication              : The following profiles are active: dev
+2021-03-24 13:52:59.694  INFO 14072 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-24 13:52:59.696  INFO 14072 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-24 13:53:02.251  INFO 14072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-24 13:53:02.436  INFO 14072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 161 ms. Found 5 JPA repository interfaces.
+2021-03-24 13:53:02.733  WARN 14072 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bs.blog]' package. Please check your configuration.
+2021-03-24 13:53:04.480  INFO 14072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-24 13:53:04.506  INFO 14072 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-24 13:53:04.507  INFO 14072 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-24 13:53:04.699  INFO 14072 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-24 13:53:04.702  INFO 14072 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5002 ms
+2021-03-24 13:53:05.148  INFO 14072 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-24 13:53:05.284  INFO 14072 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-24 13:53:05.629  INFO 14072 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-24 13:53:05.932  INFO 14072 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-24 13:53:05.934  WARN 14072 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-03-24 13:53:06.562  INFO 14072 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-24 13:53:06.622  INFO 14072 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-03-24 13:53:08.336  INFO 14072 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-24 13:53:08.347  INFO 14072 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-24 13:53:08.442  INFO 14072 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-24 13:53:09.672  WARN 14072 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-24 13:53:09.950  INFO 14072 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-24 13:53:10.323  INFO 14072 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-03-24 13:53:11.043  INFO 14072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-24 13:53:11.061  INFO 14072 --- [restartedMain] com.bs.blog.BlogApplication              : Started BlogApplication in 13.329 seconds (JVM running for 20.06)
+2021-03-24 13:57:42.676  INFO 14072 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-24 13:57:42.678  INFO 14072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-24 13:57:42.680  INFO 14072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-03-24 13:57:42.762  INFO 14072 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2021-03-24 13:57:43.175  INFO 14072 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : Result : {} index
+2021-03-24 13:57:43.175  INFO 14072 --- [http-nio-8080-exec-1] com.bs.blog.aspect.LogAspect             : --------doAfter---------
+2021-03-24 13:57:44.631  INFO 14072 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : Result : {}RequestLog{url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.bs.blog.web.IndexController.newBlog', args=[{}]}
+2021-03-24 13:57:44.644  INFO 14072 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : Result : {} _fragments :: newblogList
+2021-03-24 13:57:44.645  INFO 14072 --- [http-nio-8080-exec-2] com.bs.blog.aspect.LogAspect             : --------doAfter---------
